@@ -3,10 +3,10 @@ before_install:
 - docker info
 install:
 - npm install newman
-- pip3 install --user -r requirements.txt
-- pip3 install --user -r test-requirements.txt
-- pip3 install --user nose
-- pip3 install --user Flask-Testing
+- pip install --user -r requirements.txt
+- pip install --user -r test-requirements.txt
+- pip install --user nose
+- pip install --user Flask-Testing
 before_script:
 - node --version
 - npm --version
