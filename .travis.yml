@@ -29,8 +29,8 @@ script:
 - node_modules/.bin/newman run tests/postman_collection.json -e tests/postman_environment.json
 after_success:
 - docker login -u $DOCKER_USER -p $DOCKER_PASS
-- docker tag my_docker_reposetory/swagger_server my_docker_reposetory/swagger_server
-- docker push my_docker_reposetory/swagger_server
+- docker tag robutil/uva robutil/uva
+- docker push robutil/uva
 env:
   global:
   - secure: h1gqOZ+YPKUY9XIGy13CC7FOY1lafwKA+346Iu5OjDaGG4RVJquSNH4hER7kp9t18tquz4Xb0GPBMqaIAzGroqwO+XFhoTtP0c3UuzdhDP3LcWSMugNIWBK1Js65AsLBmzPj4HdvqhHkuG4D4QndMLTLTQWh4T6ClmWnXHJ/y2DI//TaKB02Bp+3B0Tzim9DDIoJwjZAfRumvPU8TupmAYMtgqsTmiPsjwoeHAeXpYeSfGM6pRZUq2gASUVW0m7VPG1DJMSBlkhYKuxXJFP7MVbQk5Dr0hYHbDklU5TVgJZBECEyDZqXP64chrMno08QRG06CklKthEt7UJ0e5/RtTNVihPM52g0VwU4ZZgwOIDo3mj4TvIeWQI7tfQ7vlvQiJy/3ddZfD3thhni4nXLASoE2O3na1e+1Lm3d4k7A1KkzjV531z4Jjo88gPyMbI8RZTP8VOacguSdcE8Al0dSHo6h49t1wrpK8udVsxyVnK7SPq1tIa/I/VcDZboJL1h42zL0xNwLqgS+xckayxlH0qtWOLoUQiTeM5I4PIsKE5s2XNBC4vmWVGJjS1qJAmORzNLe+TsWStVTP/mUN8HIUAVqag8jOfgeEUr9dDJc7h5TCpjkIx6IJM+JH6JJZ4w6iI3z/cK3hfyyFslyuSIHB7fcNSJknW7TjTd0/yvsNU=
